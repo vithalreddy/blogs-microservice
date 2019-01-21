@@ -50,7 +50,7 @@ module.exports = (debug = true, dropDB = false) =>
             freezeTableName: false,
             timestamps: true
           },
-          // logging: debug ? console.log : false,
+          logging: debug ? console.log : false,
           operatorsAliases: false
         }
       );
