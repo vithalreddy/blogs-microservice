@@ -1,0 +1,45 @@
+{
+  "name": "blog-ms-1",
+  "version": "1.0.0",
+  "description": "Blogger APIs Mictroservice for Posts",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha ./app/controllers/*.spec.js --timeout 15000 --exit",
+    "coverage": "nyc mocha ./app/controllers/*.spec.js --timeout 15000 --exit",
+    "docs": "nodemon swagger.js",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "VithalReddy.M.B",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "boom": "^7.3.0",
+    "compression": "^1.7.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.4",
+    "helmet": "^3.13.0",
+    "joi": "^14.3.1",
+    "morgan": "^1.9.1",
+    "pg": "^7.8.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.42.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.6.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
+    "nyc": "^13.1.0",
+    "opener": "^1.5.1",
+    "prettier": "^1.15.3",
+    "supertest": "^3.4.1",
+    "swagger-jsdoc": "^3.2.6",
+    "swagger-markdown": "^1.1.5",
+    "swagger-ui-express": "^4.0.2"
+  }
+}
