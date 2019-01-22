@@ -1,7 +1,7 @@
 module.exports = (debug = true, dropDB = false) =>
   new Promise(async (resolve, reject) => {
     try {
-      const { database } = require("../config");
+      const { database, env } = require("../config");
       const Sequelize = require("sequelize");
       const { Client } = require("pg");
 
@@ -50,7 +50,7 @@ module.exports = (debug = true, dropDB = false) =>
             freezeTableName: false,
             timestamps: true
           },
-          // logging: debug ? console.log : false,
+          logging: debug && env === "dev" ? console.log : false,
           operatorsAliases: false
         }
       );
